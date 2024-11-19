@@ -1,0 +1,3 @@
+Se quiser por um poste de cada lado do lago, eu esqueci de por no exemplo.
+
+Funcionamento do puzzle: O jogador tera que passar pelas folhas, elas vao começar a cair enquanto o jogador passa por elas
