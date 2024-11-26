@@ -2511,6 +2511,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3254027231365123947, guid: 92ff2d65ed5517b4e8338343b4301fa1, type: 3}
   m_PrefabInstance: {fileID: 1009899507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1018310146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018310147}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1018310147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018310146}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.753744, y: -0.82000756, z: -0.045955975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045214032
 GameObject:
   m_ObjectHideFlags: 0
@@ -5582,3 +5613,4 @@ SceneRoots:
   - {fileID: 937641334}
   - {fileID: 1850827174}
   - {fileID: 368138078}
+  - {fileID: 1018310147}
