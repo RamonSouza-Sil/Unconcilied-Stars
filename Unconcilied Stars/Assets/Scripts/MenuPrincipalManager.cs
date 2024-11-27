@@ -14,6 +14,8 @@ public class MenuPrincipalManager : MonoBehaviour
     public void Opcoes(){
         painelMenuInicial.SetActive(false);
         painelOpcoes.SetActive(true);
+
+        
     }
 
     public void fecharOpcoes(){
