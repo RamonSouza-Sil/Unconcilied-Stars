@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa 4.unity
     guid: dd06990484c2e0949a314ef5fd9c69b9
+  - enabled: 1
+    path: Assets/Scenes/Morte.unity
+    guid: 3b371d9d28613154ebbea4ac1bb7d458
   m_configObjects: {}
