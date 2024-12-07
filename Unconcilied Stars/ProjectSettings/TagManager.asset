@@ -8,6 +8,7 @@ TagManager:
   - Death
   - NPC
   - Item
+  - Folhas
   layers:
   - Default
   - TransparentFX
