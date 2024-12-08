@@ -6,12 +6,10 @@ using UnityEngine;
 
 public class FolhaDestroy : MonoBehaviour
 {
-    GameObject GameObject;
-    int a;
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 2.5f);
         
         
     }

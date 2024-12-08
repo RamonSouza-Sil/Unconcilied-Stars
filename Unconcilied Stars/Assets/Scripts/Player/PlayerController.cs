@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
 
+    ChamaCena ChamaCena;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -20,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         if (!canMove) // Verifica se o movimento está bloqueado
         {
             rb.velocity = Vector2.zero; // Impede o movimento do jogador

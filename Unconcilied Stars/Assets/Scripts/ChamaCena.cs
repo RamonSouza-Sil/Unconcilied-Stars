@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,9 @@ public class ChamaCena : MonoBehaviour
 
     private bool interagido = false;  // Verifica se o jogador interagiu com o objeto
 
+    PlayerController playerController;
+
+
     void Start()
     {
         cenaImagem.SetActive(false);  // A imagem começa desativada
@@ -25,7 +29,9 @@ public class ChamaCena : MonoBehaviour
         {
             FecharImagemTexto(); // Fecha a imagem e o texto
             Destroy(gameObject);  // Destrói o objeto vazio para que ele não possa ser ativado novamente
+
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -35,6 +41,7 @@ public class ChamaCena : MonoBehaviour
         {
             interagido = true;  // Marca como interagido
             MostrarImagemTexto(); // Exibe a imagem e o texto
+            playerController.speed = 5;
         }
     }
 
@@ -42,12 +49,15 @@ public class ChamaCena : MonoBehaviour
     {
         cenaImagem.SetActive(true);  // Ativa a imagem
         textoAviso.text = mensagem;  // Exibe a mensagem de aviso
+        playerController.speed = 0;
+
     }
 
     void FecharImagemTexto()
     {
         cenaImagem.SetActive(false);  // Desativa a imagem
         textoAviso.text = "";         // Limpa o texto
+        playerController.speed = 3;
     }
 }
 
