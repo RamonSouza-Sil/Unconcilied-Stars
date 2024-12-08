@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
                 sprite.flipX = true;
             }
         }
+       
+
 
         //prioridade das animações para cima
         if (direction.y > 0 && direction.x == 0)

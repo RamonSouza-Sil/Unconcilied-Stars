@@ -5,6 +5,8 @@ using TMPro;
 
 public class DialogoControl : MonoBehaviour
 {
+
+
     [Header("Components")]
     public GameObject dialogueObj;
     public Image profile;
@@ -12,7 +14,7 @@ public class DialogoControl : MonoBehaviour
     public TMP_Text actorNameText;
 
     [Header("Settings")]
-    public float typingSpeed = 0.05f; 
+    public float typingSpeed = 0.05f;
     private string[] sentences;
     private int index;
     private bool isTyping;
@@ -34,7 +36,7 @@ public class DialogoControl : MonoBehaviour
         actorNameText.text = actorName;
         index = 0;
 
-        
+
         if (playerController != null)
         {
             playerController.canMove = false;
@@ -46,57 +48,60 @@ public class DialogoControl : MonoBehaviour
     private IEnumerator TypeSentence()
     {
         isTyping = true;
-        speechText.text = ""; 
+        speechText.text = "";
         foreach (char letter in sentences[index].ToCharArray())
         {
-            speechText.text += letter; 
-            yield return new WaitForSeconds(typingSpeed); 
+            speechText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
-        isTyping = false; 
+        isTyping = false;
     }
 
     public void NextSentence()
     {
-        if (!isTyping && speechText.text == sentences[index]) 
+        if (!isTyping && speechText.text == sentences[index])
         {
             if (index < sentences.Length - 1)
             {
-                index++; 
-                StartCoroutine(TypeSentence()); 
+                index++;
+                StartCoroutine(TypeSentence());
             }
             else
             {
-                EndDialogue(); 
+                EndDialogue();
             }
         }
     }
 
     public void SkipToNextSentence()
     {
-        StopAllCoroutines(); 
+        StopAllCoroutines();
         if (index < sentences.Length - 1)
         {
-            index++; 
-            speechText.text = ""; 
-            StartCoroutine(TypeSentence()); 
+            index++;
+            speechText.text = "";
+            StartCoroutine(TypeSentence());
         }
         else
         {
-            EndDialogue(); 
+            EndDialogue();
         }
     }
 
-    private void EndDialogue()
+    public void EndDialogue()
     {
-        speechText.text = ""; 
         dialogueObj.SetActive(false);
-        d2.MarcarDialogoComoFinalizado();
 
-
+        // Certifique-se de que a variável `playerController` esteja acessível
         if (playerController != null)
         {
-            playerController.canMove = true;
+            playerController.canMove = true; // Reativa o movimento
         }
+
+        // Limpa as variáveis do diálogo (opcional)
+        profile.sprite = null;
+        sentences = null;
+        actorNameText.text = "";
     }
 }
 
