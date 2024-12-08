@@ -3715,6 +3715,7 @@ MonoBehaviour:
   speechText: {fileID: 114023165}
   actorNameText: {fileID: 1443136044}
   typingSpeed: 0
+  Fimdialogo: 0
 --- !u!1 &548505415
 GameObject:
   m_ObjectHideFlags: 0
@@ -13812,6 +13813,10 @@ PrefabInstance:
     - target: {fileID: 3795907080478137669, guid: b5401423b45c16941b3ddcd24d5597e8, type: 3}
       propertyPath: m_SortingOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291090399047300023, guid: b5401423b45c16941b3ddcd24d5597e8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5621780858785199017, guid: b5401423b45c16941b3ddcd24d5597e8, type: 3}
       propertyPath: m_LocalScale.x

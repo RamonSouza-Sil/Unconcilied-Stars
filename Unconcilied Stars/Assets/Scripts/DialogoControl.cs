@@ -17,8 +17,9 @@ public class DialogoControl : MonoBehaviour
     private int index;
     private bool isTyping;
 
-    public bool Fimdialogo;
+    public bool Fimdialogo = false;
     private PlayerController playerController;
+    private Dialogo2 d2;
 
     private void Start()
     {
@@ -88,9 +89,10 @@ public class DialogoControl : MonoBehaviour
     private void EndDialogue()
     {
         speechText.text = ""; 
-        dialogueObj.SetActive(false); 
-        Fimdialogo = true;
-        
+        dialogueObj.SetActive(false);
+        d2.MarcarDialogoComoFinalizado();
+
+
         if (playerController != null)
         {
             playerController.canMove = true;
