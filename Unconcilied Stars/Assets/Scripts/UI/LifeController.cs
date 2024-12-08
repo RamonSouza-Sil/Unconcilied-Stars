@@ -9,12 +9,12 @@ public class LifeControll : MonoBehaviour
 {
     public MenuPrincipalManager Menu;
 
-    public int vida;
-    public int vidaMax;
+    public int vida; // vida atual do player
+    public int vidaMax; //máximo de vida que o player pode ter
 
-    public Image[] coracao;
-    public Sprite cheio;
-    public Sprite vazio;
+    public Image[] coracao; // sprites da vida
+    public Sprite cheio;// sprites da vida cheia
+    public Sprite vazio;// sprites da vida vazia
 
     void Update()
     {
@@ -28,11 +28,11 @@ public class LifeControll : MonoBehaviour
             vida = vidaMax;    
         }
 
-        for (int i = 0; i < coracao.Length; i++)
+        for (int i = 0; i < coracao.Length; i++) // verifica os corações e desabilita os sprites deles
         {
             if (i < vida)
             {
-                coracao[i].sprite = cheio;
+                coracao[i].sprite = cheio; 
             }
             else
             {
@@ -50,7 +50,7 @@ public class LifeControll : MonoBehaviour
             }
         }
 
-        if (vida == 0)
+        if (vida == 0) // aciona tela de morte
         {
             GetComponent<PlayerController>().enabled = false;
             Destroy(gameObject, 2.5f);

@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        // associa os componentes do player com as variaveis
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -31,9 +32,11 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        // movimentação do jogador via "horizontal e vertical" da unity
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         rb.velocity = direction.normalized * speed;
 
+        // Verifica a direção do jogador e muda o sprite de lado
         if (direction.x != 0)
         {
             resertLayer();
@@ -49,18 +52,20 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        //prioridade das animações para cima
         if (direction.y > 0 && direction.x == 0)
         {
             resertLayer();
             anim.SetLayerWeight(1, 1);
         }
-
+        //prioridade das animações para baixo
         if (direction.y < 0 && direction.x == 0)
         {
             resertLayer();
             anim.SetLayerWeight(0, 1);
         }
 
+        // força animação de movimento
         if (direction != Vector2.zero)
         {
             anim.SetBool("Walking", true);
@@ -71,6 +76,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // distribui a prioridade de animações dentro da janela de animation
     private void resertLayer()
     {
         anim.SetLayerWeight(0, 0);

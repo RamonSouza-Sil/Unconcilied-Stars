@@ -15,7 +15,7 @@ public class Dialogo2 : MonoBehaviour
     [SerializeField] private float radius = 2f; // Raio de interação
 
     [Header("Cena a Carregar")]
-    public string cenaParaCarregar; // Nome da cena a ser carregada ao final do diálogo
+    public string cenaParaCarregar = "Cena5p2"; // Nome da cena a ser carregada ao final do diálogo
 
     private DialogoControl dc; // Controle de diálogo
     private bool onRadius; // Jogador está no raio de interação?
