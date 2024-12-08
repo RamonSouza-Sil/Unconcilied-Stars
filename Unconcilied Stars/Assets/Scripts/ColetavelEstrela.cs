@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class ColetavelEstrela : MonoBehaviour
 {
     private GameObject jogador; // Referência ao jogador
     private bool itemColetado = false; // Para garantir que o item só é coletado uma vez
+
+    [SerializeField]
+    private GameObject objetoADestruir; // Objeto a ser destruído ou desativado
 
     void Start()
     {
@@ -28,6 +33,11 @@ public class ColetavelEstrela : MonoBehaviour
     {
         itemColetado = true; // Marca o item como coletado
         gameObject.SetActive(false); // Desativa o item, fazendo-o desaparecer
+
+        if (objetoADestruir != null)
+        {
+            Destroy(objetoADestruir); // Destrói o objeto que foi configurado no Inspector
+        }
     }
 }
 

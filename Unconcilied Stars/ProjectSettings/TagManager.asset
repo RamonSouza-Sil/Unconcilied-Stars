@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - Item
   - Folhas
+  - Noite
   layers:
   - Default
   - TransparentFX
