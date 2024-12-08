@@ -21,7 +21,7 @@ public class InteracaoAviso : MonoBehaviour
         if (hit != null)
         {
             avisoTexto.gameObject.SetActive(true); // Ativa o texto de aviso
-            avisoTexto.text = "Pressione Espaço para interagir";
+            
 
             if (Input.GetKeyDown(KeyCode.Space))
             {

@@ -9,11 +9,11 @@ public class ChamaCena : MonoBehaviour
 {
     public GameObject cenaImagem;  // A imagem que será exibida após o jogador tocar o objeto vazio
     public TMP_Text textoAviso;    // O texto a ser exibido
-    public string mensagem = "Pressione espaço para continuar."; // Mensagem de aviso ao jogador
+    public string mensagem; // Mensagem de aviso ao jogador
 
     private bool interagido = false;  // Verifica se o jogador interagiu com o objeto
 
-    PlayerController playerController;
+
 
 
     void Start()
@@ -41,7 +41,7 @@ public class ChamaCena : MonoBehaviour
         {
             interagido = true;  // Marca como interagido
             MostrarImagemTexto(); // Exibe a imagem e o texto
-            playerController.speed = 5;
+
         }
     }
 
@@ -49,7 +49,7 @@ public class ChamaCena : MonoBehaviour
     {
         cenaImagem.SetActive(true);  // Ativa a imagem
         textoAviso.text = mensagem;  // Exibe a mensagem de aviso
-        playerController.speed = 0;
+
 
     }
 
@@ -57,7 +57,6 @@ public class ChamaCena : MonoBehaviour
     {
         cenaImagem.SetActive(false);  // Desativa a imagem
         textoAviso.text = "";         // Limpa o texto
-        playerController.speed = 3;
+
     }
 }
-
