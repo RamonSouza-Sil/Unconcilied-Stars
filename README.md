@@ -14,7 +14,7 @@
 
 ## Como jogar?
 Qualquer pessoa pode ter acesso ao jogo pelo Itch.Io, basta ter uma conta e acessar ao Link: 
-https://ramonsouza.itch.io/unconcilied-stars
+[https://ramonsouza.itch.io/unconcilied-stars](https://ramonsouza.itch.io/unconcilied-stars?secret=rGJosL0vzpuQOOQe29sTDqqykyw)
 
 ## História
 Enquanto caminhava pela floresta, os olhos de Nox se acenderam com uma forte luz que vinha do céu. Antes que essa luz pudesse se apagar, houve um grande tremor na terra logo à frente de Nox. Curiosa, a raposa vai até o local ver o que havia acontecido e acaba se deparando com uma estrela. Dessa estrela, havia despertado um ser que se apresentou como sendo uma deusa. Após explicar o porquê de sua queda dos céus, ela pede para Nox buscar todas as suas estrelas e devolvê-las aos céus. Assim, Nox começa sua jornada para entender por que as estrelas estão caindo e salvar os céus antes que tudo fique escuro.
